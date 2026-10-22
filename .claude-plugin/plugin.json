@@ -1,0 +1,13 @@
+{
+  "name": "backlane",
+  "version": "0.1.0",
+  "description": "Backlane lets your AI assistant work with your OTTO Market, Kaufland and Mirakl marketplace accounts through one MCP server.",
+  "author": {
+    "name": "Backlane",
+    "url": "https://app.getbacklane.com"
+  },
+  "repository": "https://github.com/pschlieker/getbacklane",
+  "keywords": ["backlane", "e-commerce", "marketplaces", "otto", "kaufland", "mirakl"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

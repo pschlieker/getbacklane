@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "backlane": {
+      "type": "http",
+      "url": "https://app.getbacklane.com/mcp"
+    }
+  }
+}
