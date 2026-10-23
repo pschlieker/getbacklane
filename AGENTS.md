@@ -19,6 +19,11 @@ manifests. The MCP server itself lives in a separate private repo and runs at
 - Keep the version in `.claude-plugin/plugin.json`, `.cursor-plugin/plugin.json`,
   `gemini-extension.json` and `skills/backlane/SKILL.md` in sync.
 - Never put credentials or customer data in this repo. It is public.
+- Setup instructions are maintained in `packages/setup-guide/`. The Markdown in
+  `docs/setup/` and `skills/backlane/references/setup.md` is generated; run
+  `npm run docs:generate` after editing the shared source, then `npm test` and
+  `npm run docs:check`. Use `npm run guide:sync -- /path/to/website /path/to/app`
+  to update consumer packages together. Bump the package version for each release.
 
 ## Testing a local edit
 

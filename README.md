@@ -36,6 +36,7 @@ Then ask:
 |---|---|
 | `skills/backlane/` | The Backlane skill: how the agent uses the MCP tools |
 | `docs/setup/` | Setup guides per AI client |
+| `packages/setup-guide/` | Shared DE/EN instructions and config generators used by the app and website |
 | `.claude-plugin/`, `.mcp.json` | Claude Code plugin and marketplace |
 | `.cursor-plugin/` | Cursor plugin |
 | `gemini-extension.json` | Gemini CLI extension |
@@ -45,3 +46,10 @@ Then ask:
 - OTTO Market
 - Kaufland
 - Mirakl-based marketplaces
+
+## Maintaining the setup guide
+
+Edit `packages/setup-guide/content.js` and its configuration generators. Run
+`npm test` and `npm run docs:generate`; `npm run docs:check` detects stale Markdown.
+See [the package README](packages/setup-guide/README.md) for syncing one version
+to the app and website while preserving their individual designs.
