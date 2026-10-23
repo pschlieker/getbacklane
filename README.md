@@ -51,5 +51,5 @@ Then ask:
 
 Edit `packages/setup-guide/content.js` and its configuration generators. Run
 `npm test` and `npm run docs:generate`; `npm run docs:check` detects stale Markdown.
-See [the package README](packages/setup-guide/README.md) for syncing one version
-to the app and website while preserving their individual designs.
+The app and website install this repo's main branch directly and pick up changes on
+their next deploy; see [the package README](packages/setup-guide/README.md).
