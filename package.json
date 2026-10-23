@@ -1,11 +1,15 @@
 {
-  "name": "backlane-agent-resources",
+  "name": "@backlane/setup-guide",
+  "version": "0.1.0",
   "private": true,
+  "description": "Shared Backlane setup content and configuration generators for the app, website and agent documentation.",
   "type": "module",
+  "exports": { ".": { "types": "./packages/setup-guide/index.d.ts", "default": "./packages/setup-guide/index.js" } },
+  "files": ["packages/setup-guide/index.js", "packages/setup-guide/index.d.ts", "packages/setup-guide/content.js"],
+  "repository": { "type": "git", "url": "https://github.com/pschlieker/getbacklane.git" },
   "scripts": {
     "test": "node --test packages/setup-guide/test/*.test.js",
     "docs:generate": "node scripts/generate-setup-docs.mjs",
-    "docs:check": "node scripts/generate-setup-docs.mjs --check",
-    "guide:sync": "node scripts/sync-setup-guide.mjs"
+    "docs:check": "node scripts/generate-setup-docs.mjs --check"
   }
 }

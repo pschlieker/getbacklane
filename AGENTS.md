@@ -22,8 +22,9 @@ manifests. The MCP server itself lives in a separate private repo and runs at
 - Setup instructions are maintained in `packages/setup-guide/`. The Markdown in
   `docs/setup/` and `skills/backlane/references/setup.md` is generated; run
   `npm run docs:generate` after editing the shared source, then `npm test` and
-  `npm run docs:check`. Use `npm run guide:sync -- /path/to/website /path/to/app`
-  to update consumer packages together. Bump the package version for each release.
+  `npm run docs:check`. The app and website install this repo's main branch as
+  `@backlane/setup-guide` and pick up changes on their next deploy, so keep the
+  exported API in `index.d.ts` backwards compatible.
 
 ## Testing a local edit
 
