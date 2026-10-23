@@ -5,7 +5,7 @@ description: >-
   Kaufland or a Mirakl-based marketplace: orders, offers, prices, inventory,
   shipments, returns, or connecting a marketplace account. Requires the
   Backlane MCP server (tools `list_integrations`, `search`, `execute`).
-version: 0.1.0
+version: 0.2.0
 homepage: https://app.getbacklane.com
 repository: https://github.com/pschlieker/getbacklane
 ---
