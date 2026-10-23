@@ -1,0 +1,11 @@
+{
+  "name": "backlane-agent-resources",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test packages/setup-guide/test/*.test.js",
+    "docs:generate": "node scripts/generate-setup-docs.mjs",
+    "docs:check": "node scripts/generate-setup-docs.mjs --check",
+    "guide:sync": "node scripts/sync-setup-guide.mjs"
+  }
+}
