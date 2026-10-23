@@ -35,6 +35,7 @@ Then ask:
 | Path | What |
 |---|---|
 | `skills/backlane/` | The Backlane skill: how the agent uses the MCP tools |
+| `skills/mirakl-product-data/` | Validate and fix product data on Mirakl marketplaces (e.g. Home24) |
 | `skills/otto-ads/` | OTTO Sponsored Product Ads: campaigns, bids, keywords and reports |
 | `docs/setup/` | Setup guides per AI client |
 | `.claude-plugin/`, `.mcp.json` | Claude Code plugin and marketplace |
