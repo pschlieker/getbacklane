@@ -3,8 +3,9 @@ name: backlane
 description: >-
   Use when the user asks about their marketplace business on OTTO Market,
   Kaufland or a Mirakl-based marketplace: orders, offers, prices, inventory,
-  shipments, returns, or connecting a marketplace account. Requires the
-  Backlane MCP server (tools `list_integrations`, `search`, `execute`).
+  shipments, or connecting a marketplace account. For buyer tickets,
+  messages, incidents and returns, use the `customer-service` skill.
+  Requires the Backlane MCP server (tools `list_integrations`, `search`, `execute`).
 version: 0.2.0
 homepage: https://app.getbacklane.com
 repository: https://github.com/pschlieker/getbacklane
@@ -31,6 +32,11 @@ marketplace task in a session:
 3. For anything not connected, give the setup link from the result.
 
 That's it. If this works, the connection is healthy.
+
+## Related skills
+
+- `customer-service`: buyer tickets, messages, incidents and returns on
+  Kaufland, Mirakl and OTTO.
 
 ## Rules
 

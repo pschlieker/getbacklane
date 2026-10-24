@@ -38,6 +38,7 @@ Then ask:
 | `skills/mirakl-product-data/` | Validate and fix product data on Mirakl marketplaces (e.g. Home24) |
 | `skills/otto-ads/` | OTTO Sponsored Product Ads: campaigns, bids, keywords and reports |
 | `skills/listing-health/` | Check whether products are live on OTTO, Kaufland and Mirakl, and why not |
+| `skills/customer-service/` | Answer buyer tickets and messages, resolve incidents and handle returns on Kaufland, Mirakl and OTTO |
 | `docs/setup/` | Setup guides per AI client |
 | `packages/setup-guide/` | Shared DE/EN instructions and config generators used by the app and website |
 | `.claude-plugin/`, `.mcp.json` | Claude Code plugin and marketplace |
