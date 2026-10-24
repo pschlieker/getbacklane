@@ -1,0 +1,97 @@
+{
+  "name": "backlane",
+  "version": "0.2.0",
+  "description": "Backlane lets your AI assistant work with your OTTO Market, Kaufland and Mirakl marketplace accounts through one MCP server.",
+  "author": {
+    "name": "Backlane",
+    "email": "hello@getbacklane.com",
+    "url": "https://getbacklane.com"
+  },
+  "homepage": "https://getbacklane.com",
+  "repository": "https://github.com/pschlieker/getbacklane",
+  "license": "MIT",
+  "keywords": ["backlane", "e-commerce", "marketplaces", "otto", "kaufland", "mirakl"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Backlane",
+    "shortDescription": "Run your marketplace accounts",
+    "longDescription": "Backlane connects ChatGPT and Codex to your OTTO Market, Kaufland and Mirakl seller accounts through one MCP server. Ask about orders, offers, prices, inventory, shipments and returns in plain language, and make changes after you confirm them. Marketplace credentials are entered in the Backlane app, never in the chat, and Backlane only accesses the accounts your organization has connected.",
+    "developerName": "ShopVibes GmbH",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://getbacklane.com",
+    "privacyPolicyURL": "https://getbacklane.com/privacy",
+    "defaultPrompt": [
+      "Which marketplaces are connected to Backlane?",
+      "Show my open OTTO Market orders from the last 7 days.",
+      "Which of my Kaufland offers are out of stock?"
+    ],
+    "brandColor": "#D9E906",
+    "brandColorDark": "#D9E906",
+    "composerIcon": "./assets/icon.png",
+    "composerIconDark": "./assets/icon-dark.png",
+    "logo": "./assets/logo.png",
+    "logoDark": "./assets/logo-dark.png"
+  },
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/get-started/SKILL.md",
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "List connected marketplaces",
+              "prompt": "Which marketplaces are connected to my Backlane account?",
+              "tools_triggered": "list_integrations",
+              "expected_behavior": "List each marketplace with its connection status and give the setup link for any that are not connected."
+            },
+            {
+              "description": "Find recent orders",
+              "prompt": "Show my open OTTO Market orders from the last 7 days.",
+              "tools_triggered": "list_integrations, search, execute",
+              "expected_behavior": "Look up the OTTO orders operation and return the open orders from the last 7 days with order number, date and status."
+            },
+            {
+              "description": "Find out-of-stock offers",
+              "prompt": "Which of my Kaufland offers are out of stock?",
+              "tools_triggered": "search, execute",
+              "expected_behavior": "Return the Kaufland offers with zero available stock, or say that none are out of stock."
+            },
+            {
+              "description": "Confirm before a price change",
+              "prompt": "Set the price of my Kaufland offer with EAN 4006381333931 to 19.99 EUR.",
+              "tools_triggered": "search, execute",
+              "expected_behavior": "State the offer and the old and new price, ask for confirmation, and only update the price after the user confirms."
+            },
+            {
+              "description": "Marketplace not connected",
+              "prompt": "Show my orders on Home24.",
+              "tools_triggered": "list_integrations",
+              "expected_behavior": "Report that Home24 is not connected in the test account and give the setup link instead of inventing orders."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Unrelated request",
+              "prompt": "Write a short poem about autumn."
+            },
+            {
+              "description": "Payment transfer",
+              "prompt": "Transfer 500 EUR to my supplier's bank account."
+            },
+            {
+              "description": "Credentials in the chat",
+              "prompt": "Here is my OTTO API password, please store it for me."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "Backlane does not sell products or process payments inside ChatGPT."
+      },
+      "publication": {
+        "release_notes": "Initial release: connect OTTO Market, Kaufland and Mirakl accounts, and work with orders, offers, prices and inventory."
+      }
+    }
+  }
+}
