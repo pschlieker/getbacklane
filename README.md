@@ -35,12 +35,15 @@ Then ask:
 | Path | What |
 |---|---|
 | `skills/backlane/` | The Backlane skill: how the agent uses the MCP tools |
+| `skills/get-started/` | Onboarding: check the connection and connect marketplace accounts |
 | `skills/mirakl-product-data/` | Validate and fix product data on Mirakl marketplaces (e.g. Home24) |
 | `skills/otto-ads/` | OTTO Sponsored Product Ads: campaigns, bids, keywords and reports |
 | `docs/setup/` | Setup guides per AI client |
 | `packages/setup-guide/` | Shared DE/EN instructions and config generators used by the app and website |
 | `.claude-plugin/`, `.mcp.json` | Claude Code plugin and marketplace |
+| `.codex-plugin/`, `.agents/plugins/` | ChatGPT and Codex plugin and local marketplace |
 | `.cursor-plugin/` | Cursor plugin |
+| `assets/` | Plugin icons |
 | `gemini-extension.json` | Gemini CLI extension |
 
 ## Supported marketplaces
@@ -55,3 +58,7 @@ Edit `packages/setup-guide/content.js` and its configuration generators. Run
 `npm test` and `npm run docs:generate`; `npm run docs:check` detects stale Markdown.
 The app and website install this repo's main branch directly and pick up changes on
 their next deploy; see [the package README](packages/setup-guide/README.md).
+
+## License
+
+[MIT](LICENSE). Privacy policy: <https://getbacklane.com/privacy>.

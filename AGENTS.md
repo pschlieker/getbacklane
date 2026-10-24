@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Guidance for coding agents working in this repo. `CLAUDE.md` points here.
+Guidance for coding agents working in this repo. `.claude/CLAUDE.md` points here.
 
 ## What this repo is
 
@@ -17,7 +17,12 @@ manifests. The MCP server itself lives in a separate private repo and runs at
   `gemini-extension.json`, `skills/backlane/references/setup.md` and
   `docs/setup/`. Change all of them together.
 - Keep the version in `.claude-plugin/plugin.json`, `.cursor-plugin/plugin.json`,
-  `gemini-extension.json` and `skills/backlane/SKILL.md` in sync.
+  `.codex-plugin/plugin.json`, `gemini-extension.json` and
+  `skills/backlane/SKILL.md` in sync.
+- `.codex-plugin/plugin.json` is the ChatGPT/Codex manifest: listing copy,
+  review test cases and the `skills/get-started` onboarding skill. Build the
+  portal upload with `npm run package:openai` (writes `dist/`). Raise the version
+  for every new upload.
 - Never put credentials or customer data in this repo. It is public.
 - Setup instructions are maintained in `packages/setup-guide/`. The Markdown in
   `docs/setup/` and `skills/backlane/references/setup.md` is generated; run
@@ -30,4 +35,12 @@ manifests. The MCP server itself lives in a separate private repo and runs at
 
 ```bash
 claude --plugin-dir .
+claude plugin validate .
+```
+
+For Codex, add this repo as a local marketplace
+(`.agents/plugins/marketplace.json`):
+
+```bash
+codex plugin marketplace add .
 ```
