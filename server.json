@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.getbacklane/backlane",
+  "title": "Backlane",
+  "description": "Hosted MCP server for OTTO Market, Kaufland and Mirakl sellers: orders, stock, listings and ads.",
+  "websiteUrl": "https://getbacklane.com/en/",
+  "repository": {
+    "url": "https://github.com/pschlieker/getbacklane",
+    "source": "github"
+  },
+  "version": "0.2.0",
+  "icons": [
+    {
+      "src": "https://getbacklane.com/backlane-signet.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": ["any"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://app.getbacklane.com/mcp"
+    }
+  ]
+}
