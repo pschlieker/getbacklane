@@ -9,7 +9,7 @@ description: >-
   across all channels. Read-only triage that hands each item to the right
   skill. Requires the Backlane MCP server (tools `list_integrations`,
   `search`, `execute`).
-version: 0.2.0
+version: 0.3.0
 homepage: https://app.getbacklane.com
 repository: https://github.com/pschlieker/getbacklane
 ---

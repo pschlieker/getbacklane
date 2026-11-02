@@ -7,7 +7,7 @@ description: >-
   accept, reject or clarify returns, or get an overview of what needs a reply.
   Also covers OTTO Market returns. Requires the Backlane MCP server (tools
   `list_integrations`, `search`, `execute`).
-version: 0.2.0
+version: 0.3.0
 homepage: https://app.getbacklane.com
 repository: https://github.com/pschlieker/getbacklane
 ---

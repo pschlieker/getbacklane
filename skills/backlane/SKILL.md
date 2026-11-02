@@ -6,7 +6,7 @@ description: >-
   shipments, or connecting a marketplace account. For buyer tickets,
   messages, incidents and returns, use the `customer-service` skill.
   Requires the Backlane MCP server (tools `list_integrations`, `search`, `execute`).
-version: 0.2.0
+version: 0.3.0
 homepage: https://app.getbacklane.com
 repository: https://github.com/pschlieker/getbacklane
 ---

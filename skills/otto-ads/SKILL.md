@@ -6,7 +6,7 @@ description: >-
   advertised products (targets) and keywords, or pull campaign, product and
   keyword performance reports. Requires the Backlane MCP server (tools
   `list_integrations`, `search`, `execute`) with an OTTO Market connection.
-version: 0.2.0
+version: 0.3.0
 homepage: https://app.getbacklane.com
 repository: https://github.com/pschlieker/getbacklane
 ---
