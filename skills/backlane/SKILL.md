@@ -37,6 +37,9 @@ That's it. If this works, the connection is healthy.
 
 - `customer-service`: buyer tickets, messages, incidents and returns on
   Kaufland, Mirakl and OTTO.
+- `daily-check`: what needs attention today across all channels.
+- `sales-analysis`: bestsellers, period comparisons, cancellations, returns
+  and channel gaps.
 
 ## Rules
 

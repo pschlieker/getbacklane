@@ -46,6 +46,8 @@ Then ask:
 | `skills/otto-ads/` | OTTO Sponsored Product Ads: campaigns, bids, keywords and reports |
 | `skills/listing-health/` | Check whether products are live on OTTO, Kaufland and Mirakl, and why not |
 | `skills/customer-service/` | Answer buyer tickets and messages, resolve incidents and handle returns on Kaufland, Mirakl and OTTO |
+| `skills/daily-check/` | Daily triage across all channels: orders to ship or accept, returns, tickets, incidents, stock outs |
+| `skills/sales-analysis/` | Bestsellers, period comparisons, cancellations and returns per product, channel gaps |
 | `docs/setup/` | Setup guides per AI client |
 | `packages/setup-guide/` | Shared DE/EN instructions and config generators used by the app and website |
 | `.claude-plugin/`, `.mcp.json` | Claude Code plugin and marketplace |
