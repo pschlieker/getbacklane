@@ -2,9 +2,14 @@
 
 ## Claude
 
-1. **Create a connector** — Open Customize → Connectors → + Add → Add custom connector. In team workspaces, an authorised member must first add the connector in organisation settings.
-2. **Add Backlane** — Enter Backlane and the server URL. Review the detected OAuth settings and follow the connection dialog to sign in.
+[Claude](https://claude.ai/directory/backlane-production)
+
+1. **Select Backlane in the Claude directory** — Open the linked “backlane production” listing in the Claude directory, or search the directory for that name. Select the community connector by shopvibes. This route does not require creating a custom connector or entering a server URL.
+2. **Connect & sign in** — Sign in to Claude if needed, then add the connector or choose “Connect”. Complete sign-in with your Backlane account. Team workspaces may require approval from an authorised member.
 3. **Enable it in chat** — Enable Backlane under + → Connectors in chat and ask which marketplaces you have connected.
+4. **Alternative: custom connector** — Only if the directory listing is unavailable: open Customize → Connectors → + Add → Add custom connector. Enter Backlane and the MCP server URL from these connection details, review the detected OAuth settings and sign in. In team workspaces, an authorised member must first add the custom connector in organisation settings.
+
+MCP server URL: https://app.getbacklane.com/mcp
 
 [Official instructions](https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp)
 

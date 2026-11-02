@@ -3,18 +3,19 @@
 **Let your AI assistant run your OTTO Market, Kaufland and Mirakl accounts.**
 
 Backlane is a remote MCP server. Connect your marketplace accounts once in the
-[Backlane app](https://app.getbacklane.com/app), add one URL to your AI client,
+[Backlane app](https://app.getbacklane.com/app), connect Backlane in your AI client,
 and ask about orders, offers, prices and inventory in plain language.
 
 This repo holds the agent side: setup guides, skills and plugin manifests.
 
 ## Quick start
 
-MCP server URL:
+**Claude web and desktop** (community connector):
 
-```
-https://app.getbacklane.com/mcp
-```
+Select [backlane production in the Claude directory](https://claude.ai/directory/backlane-production),
+add the connector and sign in with your Backlane account. Enable it in chat and
+ask which marketplaces are connected. Workspace approval may be required.
+See [the Claude guide](docs/setup/claude.md) for the manual fallback.
 
 **Claude Code** (plugin with skills):
 
@@ -23,8 +24,13 @@ https://app.getbacklane.com/mcp
 /plugin install backlane@backlane
 ```
 
-Other clients: see [docs/setup](docs/setup/README.md) for Claude, ChatGPT,
-Cursor and VS Code.
+**Other MCP clients and manual setup:**
+
+```
+https://app.getbacklane.com/mcp
+```
+
+See [docs/setup](docs/setup/README.md) for ChatGPT, Cursor and VS Code.
 
 Then ask:
 
