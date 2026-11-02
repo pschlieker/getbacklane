@@ -2,9 +2,9 @@
 
 # Connect Backlane as an MCP server.
 
-> Copy the MCP server URL and choose your AI assistant. Then sign in with your Backlane account to connect.
+> Choose your AI assistant. In Claude, select Backlane directly from the connector directory; connection details for other MCP clients are below. Then sign in with your Backlane account to connect.
 
-Instructions checked: 23 October 2026. Publicly accessible, no sign-in required.
+Base instructions checked: 23 October 2026. Claude directory listing and connector instructions checked: 2 November 2026. Publicly accessible, no sign-in required.
 
 [Full documentation](https://getbacklane.com/en/docs/)
 
@@ -51,9 +51,14 @@ Authentication: OAuth
 
 ## Claude
 
-1. **Create a connector** — Open Customize → Connectors → + Add → Add custom connector. In team workspaces, an authorised member must first add the connector in organisation settings.
-2. **Add Backlane** — Enter Backlane and the server URL. Review the detected OAuth settings and follow the connection dialog to sign in.
+[Claude](https://claude.ai/directory/backlane-production)
+
+1. **Select Backlane in the Claude directory** — Open the linked “backlane production” listing in the Claude directory, or search the directory for that name. Select the community connector by shopvibes. This route does not require creating a custom connector or entering a server URL.
+2. **Connect & sign in** — Sign in to Claude if needed, then add the connector or choose “Connect”. Complete sign-in with your Backlane account. Team workspaces may require approval from an authorised member.
 3. **Enable it in chat** — Enable Backlane under + → Connectors in chat and ask which marketplaces you have connected.
+4. **Alternative: custom connector** — Only if the directory listing is unavailable: open Customize → Connectors → + Add → Add custom connector. Enter Backlane and the MCP server URL from these connection details, review the detected OAuth settings and sign in. In team workspaces, an authorised member must first add the custom connector in organisation settings.
+
+MCP server URL: https://app.getbacklane.com/mcp
 
 [Official instructions](https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp)
 
@@ -165,7 +170,7 @@ Available product statuses and errors, with missing data explicitly identified.
 
 ## Guidance for AI assistants
 
-First ask which AI assistant I use and whether I already have a Backlane account. Then guide me step by step: create an account or sign in, connect a marketplace, add Backlane as a remote MCP server in my AI assistant and complete OAuth sign-in. The MCP server URL below belongs in the connection settings; it is not a web page to open. Pasting this prompt alone does not establish a connection. After setup, ask me to list my connected marketplaces through Backlane to check the connection.
+First ask which AI assistant I use and whether I already have a Backlane account. Then guide me step by step: create an account or sign in and connect a marketplace. For Claude web or desktop, select the existing “backlane production” community connector by shopvibes in the Claude directory: https://claude.ai/directory/backlane-production. Guide me through adding it, signing in to Backlane and enabling it in chat. Use a custom Claude connector with a server URL only as an alternative if the listing is unavailable; respect workspace approvals. For Claude Code and other MCP clients, use their own instructions and complete OAuth sign-in. For manual setup, the MCP server URL below belongs in the connection settings; it is not a web page to open. Pasting this prompt alone does not establish a connection. After setup, ask me to list my connected marketplaces through Backlane to check the connection.
 
 list_integrations shows connections and setup links. search explores the API specification of active connections. execute performs API calls and can change data. The read-only connection check is sufficient for setup.
 

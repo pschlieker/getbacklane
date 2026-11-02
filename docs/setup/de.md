@@ -2,9 +2,9 @@
 
 # Backlane als MCP-Server verbinden.
 
-> Kopiere die MCP-Server-URL und wähle deinen KI-Assistenten. Melde dich anschließend mit deinem Backlane-Account an.
+> Wähle deinen KI-Assistenten. In Claude kannst du Backlane direkt im Konnektor-Verzeichnis auswählen; für andere MCP-Clients findest du hier die Verbindungsdaten. Melde dich anschließend mit deinem Backlane-Account an.
 
-Anleitungen geprüft: 23. Oktober 2026. Öffentlich zugänglich, ohne Anmeldung.
+Grundanleitungen geprüft: 23. Oktober 2026. Claude-Verzeichniseintrag und Konnektor-Anleitung geprüft: 2. November 2026. Öffentlich zugänglich, ohne Anmeldung.
 
 [Ausführliche Dokumentation](https://getbacklane.com/docs/)
 
@@ -51,9 +51,14 @@ Authentifizierung: OAuth
 
 ## Claude
 
-1. **Konnektor anlegen** — Öffne Customize → Connectors → + Add → Add custom connector. In Team-Workspaces muss ein berechtigtes Mitglied den Konnektor zuerst in den Organisationseinstellungen hinzufügen.
-2. **Backlane hinzufügen** — Trage Backlane und die Server-URL ein. Prüfe die erkannten OAuth-Einstellungen und folge dem Verbindungsdialog zur Anmeldung.
+[Claude](https://claude.ai/directory/backlane-production)
+
+1. **Backlane im Claude-Verzeichnis auswählen** — Öffne den verlinkten Eintrag „backlane production“ im Claude-Verzeichnis oder suche dort nach diesem Namen. Wähle den Community-Konnektor von shopvibes aus. Für diesen Weg musst du keinen eigenen Konnektor anlegen und keine Server-URL eintragen.
+2. **Verbinden & anmelden** — Melde dich bei Claude an, falls nötig, und füge den Konnektor hinzu bzw. wähle „Verbinden“. Schließe die Anmeldung mit deinem Backlane-Account ab. In Team-Workspaces kann eine Freigabe durch ein berechtigtes Mitglied erforderlich sein.
 3. **Im Chat aktivieren** — Aktiviere Backlane im Chat unter + → Connectors und frage nach deinen verbundenen Marktplätzen.
+4. **Alternative: eigener Konnektor** — Nur wenn der Verzeichniseintrag nicht verfügbar ist: Öffne Customize → Connectors → + Add → Add custom connector. Trage Backlane und die MCP-Server-URL aus diesen Verbindungsdaten ein, prüfe die erkannten OAuth-Einstellungen und melde dich an. In Team-Workspaces muss ein berechtigtes Mitglied den eigenen Konnektor zuerst in den Organisationseinstellungen hinzufügen.
+
+MCP-Server-URL: https://app.getbacklane.com/mcp
 
 [Offizielle Anleitung](https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp)
 
@@ -165,7 +170,7 @@ Verfügbare Produktstatus und Fehlerhinweise; fehlende Daten werden als solche b
 
 ## Hinweise für KI-Assistenten
 
-Frage mich zuerst, welchen KI-Assistenten ich nutze und ob ich bereits einen Backlane-Account habe. Begleite mich dann Schritt für Schritt: Account erstellen oder anmelden, einen Marktplatz verbinden, Backlane als Remote-MCP-Server in meinem KI-Assistenten hinzufügen und die OAuth-Anmeldung abschließen. Die MCP-Server-URL unten gehört in die Verbindungseinstellungen; sie ist keine Webseite zum Öffnen. Das Einfügen dieses Prompts allein stellt noch keine Verbindung her. Bitte mich nach der Einrichtung, meine verbundenen Marktplätze über Backlane anzeigen zu lassen, um die Verbindung zu prüfen.
+Frage mich zuerst, welchen KI-Assistenten ich nutze und ob ich bereits einen Backlane-Account habe. Begleite mich dann Schritt für Schritt: Account erstellen oder anmelden und einen Marktplatz verbinden. Für Claude Web oder Desktop wähle den vorhandenen Community-Konnektor „backlane production“ von shopvibes im Claude-Verzeichnis: https://claude.ai/directory/backlane-production. Führe mich durch das Hinzufügen, die Anmeldung bei Backlane und die Aktivierung im Chat. Nutze einen eigenen Claude-Konnektor mit Server-URL nur als Alternative, wenn der Eintrag nicht verfügbar ist; beachte die Workspace-Freigaben. Für Claude Code und andere MCP-Clients nutze deren eigene Anleitung und schließe die OAuth-Anmeldung ab. Die MCP-Server-URL unten gehört bei manueller Einrichtung in die Verbindungseinstellungen; sie ist keine Webseite zum Öffnen. Das Einfügen dieses Prompts allein stellt noch keine Verbindung her. Bitte mich nach der Einrichtung, meine verbundenen Marktplätze über Backlane anzeigen zu lassen, um die Verbindung zu prüfen.
 
 list_integrations zeigt Anbindungen und Einrichtungslinks. search erschließt die API-Spezifikation der aktiven Verbindungen. execute führt API-Aufrufe aus und kann Daten ändern. Für die Einrichtung reicht der lesende Verbindungstest.
 

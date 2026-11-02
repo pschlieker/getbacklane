@@ -14,6 +14,12 @@ Render `guide.clients` and `guide.copy` in the consumer's own design. Pass the
 configured environment URL in the app; never include credentials. Each call
 returns an independent model. Existing JSON configs must be merged, not replaced.
 
+For Claude web and desktop, `client.setupLink` points to the Backlane community
+connector listing and `client.steps` explains directory selection, sign-in and chat
+activation. The last step is explicitly an optional manual fallback. Consumers
+should show the setup link and render the steps in order. `copy.agentInstructions`
+uses the same directory route; Claude Code keeps its separate command/plugin flow.
+
 ## How consumers install it
 
 The repository root is the npm package (see the root `package.json`), so the app and

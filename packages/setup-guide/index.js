@@ -1,4 +1,4 @@
-import { setupContent } from './content.js';
+import { setupContent, claudeDirectoryUrl } from './content.js';
 export { setupContent };
 
 export const defaults = {
@@ -10,7 +10,7 @@ export const defaults = {
 
 const clients = [
   { id: 'chatgpt', name: 'ChatGPT', logo: 'openai', docs: 'https://developers.openai.com/api/docs/guides/custom-mcp-server', setupLink: 'https://chatgpt.com/plugins' },
-  { id: 'claude', name: 'Claude', logo: 'claude', docs: 'https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp' },
+  { id: 'claude', name: 'Claude', logo: 'claude', docs: 'https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp', setupLink: claudeDirectoryUrl },
   { id: 'claudeCode', name: 'Claude Code', logo: 'claude', docs: 'https://code.claude.com/docs/en/mcp' },
   { id: 'cursor', name: 'Cursor', logo: 'cursor', docs: 'https://cursor.com/docs/mcp' },
   { id: 'vscode', name: 'VS Code', logo: 'vscode', docs: 'https://code.visualstudio.com/docs/agents/reference/mcp-configuration' },
@@ -54,6 +54,7 @@ export function renderClientMarkdown(guide, client) {
     `## ${client.name}`,
     ...(client.setupLink ? [`[${client.name}](${client.setupLink})`] : []),
     client.steps.map(([title, text], i) => `${i + 1}. **${title}** — ${text}`).join('\n'),
+    ...(client.id === 'claude' ? [`${t.serverUrlLabel}: ${guide.mcpUrl}`] : []),
     ...(client.snippet ? [`**${client.snippet.label}**\n\n\`\`\`${client.snippet.language}\n${client.snippet.code}\n\`\`\``, ...(client.snippet.language === 'json' ? [t.configNote] : [])] : []),
     ...(client.id === 'claudeCode' ? [`### ${t.ui.plugin}\n\n\`\`\`text\n${guide.pluginCommand}\n\`\`\``] : []),
     `[${t.details.docsLabel}](${client.docs})`,
