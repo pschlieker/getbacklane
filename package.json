@@ -10,6 +10,7 @@
   "scripts": {
     "test": "node --test packages/setup-guide/test/*.test.js",
     "docs:generate": "node scripts/generate-setup-docs.mjs",
-    "docs:check": "node scripts/generate-setup-docs.mjs --check"
+    "docs:check": "node scripts/generate-setup-docs.mjs --check",
+    "package:openai": "node scripts/build-openai-zip.mjs"
   }
 }

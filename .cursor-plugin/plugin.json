@@ -6,6 +6,7 @@
     "name": "Backlane"
   },
   "homepage": "https://app.getbacklane.com",
+  "license": "MIT",
   "keywords": ["backlane", "e-commerce", "marketplaces", "otto", "kaufland", "mirakl"],
   "skills": "./skills/",
   "mcpServers": {

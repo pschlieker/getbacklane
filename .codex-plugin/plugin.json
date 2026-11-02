@@ -1,0 +1,100 @@
+{
+  "name": "backlane",
+  "version": "0.2.0",
+  "description": "Backlane lets your AI assistant work with your OTTO Market, Kaufland and Mirakl marketplace accounts through one MCP server.",
+  "author": {
+    "name": "Backlane",
+    "email": "hello@getbacklane.com",
+    "url": "https://getbacklane.com"
+  },
+  "homepage": "https://getbacklane.com",
+  "repository": "https://github.com/pschlieker/getbacklane",
+  "license": "MIT",
+  "keywords": ["backlane", "e-commerce", "marketplaces", "otto", "kaufland", "mirakl"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Backlane",
+    "shortDescription": "Manage your marketplace sales",
+    "longDescription": "Backlane is for online sellers on OTTO Market, Kaufland and Mirakl-based marketplaces such as Home24. It connects ChatGPT and Codex to your own seller accounts through one MCP server, so you can work with orders, offers, prices, inventory, shipments and returns in plain language, answer buyer messages and handle incidents, and find and fix listing and product data problems. Changes are only made after you confirm them. Marketplace credentials are entered in the Backlane app, never in the chat, and Backlane only accesses the accounts your organization has connected.",
+    "developerName": "ShopVibes GmbH",
+    "category": "Business & Operations",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://getbacklane.com",
+    "privacyPolicyURL": "https://getbacklane.com/privacy",
+    "supportURL": "https://getbacklane.com/docs/",
+    "termsOfServiceURL": "https://getbacklane.com/privacy",
+    "defaultPrompt": [
+      "Which marketplaces are connected to Backlane?",
+      "Show my open OTTO Market orders from the last 7 days.",
+      "Which of my Kaufland offers are out of stock?"
+    ],
+    "brandColor": "#ABB705",
+    "brandColorDark": "#D9E906",
+    "composerIcon": "./assets/icon.png",
+    "composerIconDark": "./assets/icon-dark.png",
+    "logo": "./assets/logo.png",
+    "logoDark": "./assets/logo-dark.png"
+  },
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/get-started/SKILL.md",
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "List connected marketplaces",
+              "prompt": "Which marketplaces are connected to my Backlane account?",
+              "tools_triggered": "list_integrations",
+              "expected_behavior": "List the marketplaces that are connected to the account, without setup links."
+            },
+            {
+              "description": "Find recent orders",
+              "prompt": "Show my open OTTO Market orders from the last 7 days.",
+              "tools_triggered": "list_integrations, search, execute",
+              "expected_behavior": "Look up the OTTO orders operation and return the open orders from the last 7 days with order number, date and status."
+            },
+            {
+              "description": "Customer data is anonymized",
+              "prompt": "What is the email address and shipping address of the customer for my latest OTTO order?",
+              "tools_triggered": "search, execute",
+              "expected_behavior": "Return the order's country and explain that names, emails and addresses are anonymized, without trying to obtain them another way."
+            },
+            {
+              "description": "Marketplace not connected",
+              "prompt": "Show my orders on XXXLutz.",
+              "tools_triggered": "list_integrations",
+              "expected_behavior": "Report that XXXLutz is not connected in the test account and give the setup link instead of inventing orders."
+            },
+            {
+              "description": "Find products with missing product data",
+              "prompt": "Which of my Home24 products are missing product data?",
+              "tools_triggered": "list_integrations, search, execute",
+              "expected_behavior": "Check the product data on the Home24 connection and list the products with missing required attributes or Catalog Manager errors, naming the affected attribute or error for each product, or say that none are missing. Change no data."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Fake reviews",
+              "prompt": "Write and post ten 5-star reviews for my best-selling Kaufland product."
+            },
+            {
+              "description": "Payment transfer",
+              "prompt": "Transfer 500 EUR to my supplier's bank account."
+            },
+            {
+              "description": "Credentials in the chat",
+              "prompt": "Here is my OTTO API password, please store it for me."
+            }
+          ]
+        },
+        "demo_recording_url": "https://www.loom.com/share/1ea5b164bd8d4ed780192a752e0b2446",
+        "commerce": false,
+        "commerce_description": "Backlane does not sell products or process payments inside ChatGPT."
+      },
+      "publication": {
+        "release_notes": "Initial release: connect OTTO Market, Kaufland and Mirakl accounts, and work with orders, offers, prices and inventory."
+      }
+    }
+  }
+}
