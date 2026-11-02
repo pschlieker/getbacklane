@@ -22,12 +22,14 @@
     "capabilities": ["Read", "Write"],
     "websiteURL": "https://getbacklane.com",
     "privacyPolicyURL": "https://getbacklane.com/privacy",
+    "supportURL": "https://getbacklane.com/docs/",
+    "termsOfServiceURL": "https://getbacklane.com/privacy",
     "defaultPrompt": [
       "Which marketplaces are connected to Backlane?",
       "Show my open OTTO Market orders from the last 7 days.",
       "Which of my Kaufland offers are out of stock?"
     ],
-    "brandColor": "#D9E906",
+    "brandColor": "#ABB705",
     "brandColorDark": "#D9E906",
     "composerIcon": "./assets/icon.png",
     "composerIconDark": "./assets/icon-dark.png",
