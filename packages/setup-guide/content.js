@@ -1,4 +1,6 @@
 // Canonical setup copy. Edit here; App, website and Markdown consume this data.
+export const claudeDirectoryUrl = 'https://claude.ai/directory/backlane-production';
+
 export const setupContent = {
   "de": {
     "steps": [
@@ -16,7 +18,7 @@ export const setupContent = {
       ]
     ],
     "guideTitle": "Backlane als MCP-Server verbinden.",
-    "guideIntro": "Kopiere die MCP-Server-URL und wähle deinen KI-Assistenten. Melde dich anschließend mit deinem Backlane-Account an.",
+    "guideIntro": "Wähle deinen KI-Assistenten. In Claude kannst du Backlane direkt im Konnektor-Verzeichnis auswählen; für andere MCP-Clients findest du hier die Verbindungsdaten. Melde dich anschließend mit deinem Backlane-Account an.",
     "serverUrlLabel": "MCP-Server-URL",
     "copyUrl": "URL kopieren",
     "copyConfig": "Konfiguration kopieren",
@@ -43,16 +45,20 @@ export const setupContent = {
       ],
       "claude": [
         [
-          "Konnektor anlegen",
-          "Öffne Customize → Connectors → + Add → Add custom connector. In Team-Workspaces muss ein berechtigtes Mitglied den Konnektor zuerst in den Organisationseinstellungen hinzufügen."
+          "Backlane im Claude-Verzeichnis auswählen",
+          "Öffne den verlinkten Eintrag „backlane production“ im Claude-Verzeichnis oder suche dort nach diesem Namen. Wähle den Community-Konnektor von shopvibes aus. Für diesen Weg musst du keinen eigenen Konnektor anlegen und keine Server-URL eintragen."
         ],
         [
-          "Backlane hinzufügen",
-          "Trage Backlane und die Server-URL ein. Prüfe die erkannten OAuth-Einstellungen und folge dem Verbindungsdialog zur Anmeldung."
+          "Verbinden & anmelden",
+          "Melde dich bei Claude an, falls nötig, und füge den Konnektor hinzu bzw. wähle „Verbinden“. Schließe die Anmeldung mit deinem Backlane-Account ab. In Team-Workspaces kann eine Freigabe durch ein berechtigtes Mitglied erforderlich sein."
         ],
         [
           "Im Chat aktivieren",
           "Aktiviere Backlane im Chat unter + → Connectors und frage nach deinen verbundenen Marktplätzen."
+        ],
+        [
+          "Alternative: eigener Konnektor",
+          "Nur wenn der Verzeichniseintrag nicht verfügbar ist: Öffne Customize → Connectors → + Add → Add custom connector. Trage Backlane und die MCP-Server-URL aus diesen Verbindungsdaten ein, prüfe die erkannten OAuth-Einstellungen und melde dich an. In Team-Workspaces muss ein berechtigtes Mitglied den eigenen Konnektor zuerst in den Organisationseinstellungen hinzufügen."
         ]
       ],
       "cursor": [
@@ -99,9 +105,9 @@ export const setupContent = {
       ]
     },
     "guideNote": "In Team-Workspaces kann eine Freigabe durch einen Administrator erforderlich sein. Menübezeichnungen und Verfügbarkeit hängen vom KI-Anbieter ab.",
-    "agentInstructions": "Frage mich zuerst, welchen KI-Assistenten ich nutze und ob ich bereits einen Backlane-Account habe. Begleite mich dann Schritt für Schritt: Account erstellen oder anmelden, einen Marktplatz verbinden, Backlane als Remote-MCP-Server in meinem KI-Assistenten hinzufügen und die OAuth-Anmeldung abschließen. Die MCP-Server-URL unten gehört in die Verbindungseinstellungen; sie ist keine Webseite zum Öffnen. Das Einfügen dieses Prompts allein stellt noch keine Verbindung her. Bitte mich nach der Einrichtung, meine verbundenen Marktplätze über Backlane anzeigen zu lassen, um die Verbindung zu prüfen.",
+    "agentInstructions": `Frage mich zuerst, welchen KI-Assistenten ich nutze und ob ich bereits einen Backlane-Account habe. Begleite mich dann Schritt für Schritt: Account erstellen oder anmelden und einen Marktplatz verbinden. Für Claude Web oder Desktop wähle den vorhandenen Community-Konnektor „backlane production“ von shopvibes im Claude-Verzeichnis: ${claudeDirectoryUrl}. Führe mich durch das Hinzufügen, die Anmeldung bei Backlane und die Aktivierung im Chat. Nutze einen eigenen Claude-Konnektor mit Server-URL nur als Alternative, wenn der Eintrag nicht verfügbar ist; beachte die Workspace-Freigaben. Für Claude Code und andere MCP-Clients nutze deren eigene Anleitung und schließe die OAuth-Anmeldung ab. Die MCP-Server-URL unten gehört bei manueller Einrichtung in die Verbindungseinstellungen; sie ist keine Webseite zum Öffnen. Das Einfügen dieses Prompts allein stellt noch keine Verbindung her. Bitte mich nach der Einrichtung, meine verbundenen Marktplätze über Backlane anzeigen zu lassen, um die Verbindung zu prüfen.`,
     "details": {
-      "checked": "Anleitungen geprüft: 23. Oktober 2026. Öffentlich zugänglich, ohne Anmeldung.",
+      "checked": "Grundanleitungen geprüft: 23. Oktober 2026. Claude-Verzeichniseintrag und Konnektor-Anleitung geprüft: 2. November 2026. Öffentlich zugänglich, ohne Anmeldung.",
       "guidanceTitle": "Hinweise für KI-Assistenten",
       "prerequisitesTitle": "Voraussetzungen",
       "prerequisites": "Du brauchst einen Backlane-Account und Zugriff auf den Seller-Account, den du verbinden möchtest. Dein KI-Client muss Remote-MCP mit OAuth unterstützen. Zugangsdaten werden im jeweiligen Anmelde- oder Verbindungsdialog eingegeben, nicht in den Chat kopiert.",
@@ -157,7 +163,7 @@ export const setupContent = {
     "ui": {
       "language": "de",
       "hintTitle": "KI-Assistent verbinden",
-      "intro": "Verbinde deinen KI-Assistenten mit dieser URL. Er sieht die aktiven Verbindungen deiner Organisation.",
+      "intro": "Wähle Backlane im Claude-Verzeichnis aus oder nutze die MCP-Server-URL für andere Clients und die manuelle Einrichtung. Dein KI-Assistent sieht die aktiven Verbindungen deiner Organisation.",
       "url": "MCP-Server-URL",
       "copy": "Kopieren",
       "copied": "Kopiert",
@@ -185,7 +191,7 @@ export const setupContent = {
       ]
     ],
     "guideTitle": "Connect Backlane as an MCP server.",
-    "guideIntro": "Copy the MCP server URL and choose your AI assistant. Then sign in with your Backlane account to connect.",
+    "guideIntro": "Choose your AI assistant. In Claude, select Backlane directly from the connector directory; connection details for other MCP clients are below. Then sign in with your Backlane account to connect.",
     "serverUrlLabel": "MCP server URL",
     "copyUrl": "Copy URL",
     "copyConfig": "Copy configuration",
@@ -212,16 +218,20 @@ export const setupContent = {
       ],
       "claude": [
         [
-          "Create a connector",
-          "Open Customize → Connectors → + Add → Add custom connector. In team workspaces, an authorised member must first add the connector in organisation settings."
+          "Select Backlane in the Claude directory",
+          "Open the linked “backlane production” listing in the Claude directory, or search the directory for that name. Select the community connector by shopvibes. This route does not require creating a custom connector or entering a server URL."
         ],
         [
-          "Add Backlane",
-          "Enter Backlane and the server URL. Review the detected OAuth settings and follow the connection dialog to sign in."
+          "Connect & sign in",
+          "Sign in to Claude if needed, then add the connector or choose “Connect”. Complete sign-in with your Backlane account. Team workspaces may require approval from an authorised member."
         ],
         [
           "Enable it in chat",
           "Enable Backlane under + → Connectors in chat and ask which marketplaces you have connected."
+        ],
+        [
+          "Alternative: custom connector",
+          "Only if the directory listing is unavailable: open Customize → Connectors → + Add → Add custom connector. Enter Backlane and the MCP server URL from these connection details, review the detected OAuth settings and sign in. In team workspaces, an authorised member must first add the custom connector in organisation settings."
         ]
       ],
       "cursor": [
@@ -268,9 +278,9 @@ export const setupContent = {
       ]
     },
     "guideNote": "Team workspaces may require administrator approval. Menu labels and availability depend on your AI provider.",
-    "agentInstructions": "First ask which AI assistant I use and whether I already have a Backlane account. Then guide me step by step: create an account or sign in, connect a marketplace, add Backlane as a remote MCP server in my AI assistant and complete OAuth sign-in. The MCP server URL below belongs in the connection settings; it is not a web page to open. Pasting this prompt alone does not establish a connection. After setup, ask me to list my connected marketplaces through Backlane to check the connection.",
+    "agentInstructions": `First ask which AI assistant I use and whether I already have a Backlane account. Then guide me step by step: create an account or sign in and connect a marketplace. For Claude web or desktop, select the existing “backlane production” community connector by shopvibes in the Claude directory: ${claudeDirectoryUrl}. Guide me through adding it, signing in to Backlane and enabling it in chat. Use a custom Claude connector with a server URL only as an alternative if the listing is unavailable; respect workspace approvals. For Claude Code and other MCP clients, use their own instructions and complete OAuth sign-in. For manual setup, the MCP server URL below belongs in the connection settings; it is not a web page to open. Pasting this prompt alone does not establish a connection. After setup, ask me to list my connected marketplaces through Backlane to check the connection.`,
     "details": {
-      "checked": "Instructions checked: 23 October 2026. Publicly accessible, no sign-in required.",
+      "checked": "Base instructions checked: 23 October 2026. Claude directory listing and connector instructions checked: 2 November 2026. Publicly accessible, no sign-in required.",
       "guidanceTitle": "Guidance for AI assistants",
       "prerequisitesTitle": "Prerequisites",
       "prerequisites": "You need a Backlane account and access to the seller account you want to connect. Your AI client must support remote MCP with OAuth. Enter credentials in the relevant sign-in or connection dialog, not in chat.",
@@ -326,7 +336,7 @@ export const setupContent = {
     "ui": {
       "language": "en",
       "hintTitle": "Connect your AI assistant",
-      "intro": "Connect your AI assistant with this URL. It sees your organisation’s active connections.",
+      "intro": "Select Backlane in the Claude directory, or use the MCP server URL for other clients and manual setup. Your AI assistant sees your organisation’s active connections.",
       "url": "MCP server URL",
       "copy": "Copy",
       "copied": "Copied",

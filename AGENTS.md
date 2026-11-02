@@ -14,15 +14,20 @@ manifests. The MCP server itself lives in a separate private repo and runs at
 - One skill per folder under `skills/<name>/SKILL.md`, with longer material in
   `references/`.
 - The MCP URL appears in `.mcp.json`, `.cursor-plugin/plugin.json`,
-  `gemini-extension.json`, `skills/backlane/references/setup.md` and
-  `docs/setup/`. Change all of them together.
+  `gemini-extension.json`, `server.json`, `skills/backlane/references/setup.md`
+  and `docs/setup/`. Change all of them together.
 - Keep the version in `.claude-plugin/plugin.json`, `.cursor-plugin/plugin.json`,
-  `.codex-plugin/plugin.json`, `gemini-extension.json` and
+  `.codex-plugin/plugin.json`, `gemini-extension.json`, `server.json` and
   `skills/backlane/SKILL.md` in sync.
 - `.codex-plugin/plugin.json` is the ChatGPT/Codex manifest: listing copy,
   review test cases and the `skills/get-started` onboarding skill. Build the
   portal upload with `npm run package:openai` (writes `dist/`). Raise the version
   for every new upload.
+- `server.json` is the entry in the official MCP Registry
+  (`com.getbacklane/backlane`). After changing it, republish with
+  `mcp-publisher validate && mcp-publisher publish`. Publishing needs a DNS
+  login for getbacklane.com (`mcp-publisher login dns`); the private key is
+  kept outside this repo.
 - Never put credentials or customer data in this repo. It is public.
 - Setup instructions are maintained in `packages/setup-guide/`. The Markdown in
   `docs/setup/` and `skills/backlane/references/setup.md` is generated; run

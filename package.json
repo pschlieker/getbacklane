@@ -1,6 +1,6 @@
 {
   "name": "@backlane/setup-guide",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Shared Backlane setup content and configuration generators for the app, website and agent documentation.",
   "type": "module",
