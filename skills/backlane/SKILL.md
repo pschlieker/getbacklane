@@ -6,7 +6,7 @@ description: >-
   shipments, or connecting a marketplace account. For buyer tickets,
   messages, incidents and returns, use the `customer-service` skill.
   Requires the Backlane MCP server (tools `list_integrations`, `search`, `execute`).
-version: 0.2.0
+version: 0.3.0
 homepage: https://app.getbacklane.com
 repository: https://github.com/pschlieker/getbacklane
 ---
@@ -37,6 +37,9 @@ That's it. If this works, the connection is healthy.
 
 - `customer-service`: buyer tickets, messages, incidents and returns on
   Kaufland, Mirakl and OTTO.
+- `daily-check`: what needs attention today across all channels.
+- `sales-analysis`: bestsellers, period comparisons, cancellations, returns
+  and channel gaps.
 
 ## Rules
 
