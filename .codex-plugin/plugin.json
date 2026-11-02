@@ -15,10 +15,10 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Backlane",
-    "shortDescription": "Run your marketplace accounts",
-    "longDescription": "Backlane connects ChatGPT and Codex to your OTTO Market, Kaufland and Mirakl seller accounts through one MCP server. Ask about orders, offers, prices, inventory, shipments and returns in plain language, and make changes after you confirm them. Marketplace credentials are entered in the Backlane app, never in the chat, and Backlane only accesses the accounts your organization has connected.",
+    "shortDescription": "Manage your marketplace sales",
+    "longDescription": "Backlane is for online sellers on OTTO Market, Kaufland and Mirakl-based marketplaces such as Home24. It connects ChatGPT and Codex to your own seller accounts through one MCP server, so you can work with orders, offers, prices, inventory, shipments and returns in plain language, answer buyer messages and handle incidents, and find and fix listing and product data problems. Changes are only made after you confirm them. Marketplace credentials are entered in the Backlane app, never in the chat, and Backlane only accesses the accounts your organization has connected.",
     "developerName": "ShopVibes GmbH",
-    "category": "Productivity",
+    "category": "Business & Operations",
     "capabilities": ["Read", "Write"],
     "websiteURL": "https://getbacklane.com",
     "privacyPolicyURL": "https://getbacklane.com/privacy",
