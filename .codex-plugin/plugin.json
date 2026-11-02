@@ -75,8 +75,8 @@
           ],
           "negative": [
             {
-              "description": "Unrelated request",
-              "prompt": "Write a short poem about autumn."
+              "description": "Fake reviews",
+              "prompt": "Write and post ten 5-star reviews for my best-selling Kaufland product."
             },
             {
               "description": "Payment transfer",
