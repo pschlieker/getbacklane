@@ -46,7 +46,7 @@
               "description": "List connected marketplaces",
               "prompt": "Which marketplaces are connected to my Backlane account?",
               "tools_triggered": "list_integrations",
-              "expected_behavior": "List each marketplace with its connection status and give the setup link for any that are not connected."
+              "expected_behavior": "List the marketplaces that are connected to the account, without setup links."
             },
             {
               "description": "Find recent orders",
@@ -55,22 +55,22 @@
               "expected_behavior": "Look up the OTTO orders operation and return the open orders from the last 7 days with order number, date and status."
             },
             {
-              "description": "Find out-of-stock offers",
-              "prompt": "Which of my Kaufland offers are out of stock?",
-              "tools_triggered": "search, execute",
-              "expected_behavior": "Return the Kaufland offers with zero available stock, or say that none are out of stock."
-            },
-            {
               "description": "Confirm before a price change",
-              "prompt": "Set the price of my Kaufland offer with EAN 4006381333931 to 19.99 EUR.",
+              "prompt": "Increase the price of my Kaufland offer with EAN 4006381333931 by 10%.",
               "tools_triggered": "search, execute",
-              "expected_behavior": "State the offer and the old and new price, ask for confirmation, and only update the price after the user confirms."
+              "expected_behavior": "Find the offer (on the NL storefront), read its current price, state the current price and the new price (current price plus 10%, rounded to the cent), ask for confirmation, and make no update call until the user confirms."
             },
             {
               "description": "Marketplace not connected",
-              "prompt": "Show my orders on Home24.",
+              "prompt": "Show my orders on XXXLutz.",
               "tools_triggered": "list_integrations",
-              "expected_behavior": "Report that Home24 is not connected in the test account and give the setup link instead of inventing orders."
+              "expected_behavior": "Report that XXXLutz is not connected in the test account and give the setup link instead of inventing orders."
+            },
+            {
+              "description": "Find products with missing product data",
+              "prompt": "Which of my Home24 products are missing product data?",
+              "tools_triggered": "list_integrations, search, execute",
+              "expected_behavior": "Check the product data on the Home24 connection and list the products with missing required attributes or Catalog Manager errors, naming the affected attribute or error for each product, or say that none are missing. Change no data."
             }
           ],
           "negative": [

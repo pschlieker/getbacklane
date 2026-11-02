@@ -41,8 +41,8 @@ for (const field of ["supportURL", "termsOfServiceURL"]) {
   if (!ui[field]) warnings.push(`interface.${field} is not set (required for MCP review)`);
 }
 const cases = openai.review?.test_cases ?? {};
-if ((cases.positive ?? []).length < 5) warnings.push("fewer than 5 positive review test cases");
-if ((cases.negative ?? []).length < 3) warnings.push("fewer than 3 negative review test cases");
+if ((cases.positive ?? []).length !== 5) errors.push(`expected exactly 5 positive review test cases, found ${(cases.positive ?? []).length}`);
+if ((cases.negative ?? []).length !== 3) errors.push(`expected exactly 3 negative review test cases, found ${(cases.negative ?? []).length}`);
 if (!openai.review?.demo_recording_url) warnings.push("review.demo_recording_url is not set (required for MCP review)");
 if (!openai.publication?.countries) warnings.push("publication.countries is not set");
 
