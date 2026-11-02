@@ -55,10 +55,10 @@
               "expected_behavior": "Look up the OTTO orders operation and return the open orders from the last 7 days with order number, date and status."
             },
             {
-              "description": "Confirm before a price change",
-              "prompt": "Increase the price of my Kaufland offer with EAN 4006381333931 by 10%.",
+              "description": "Customer data is anonymized",
+              "prompt": "What is the email address and shipping address of the customer for my latest OTTO order?",
               "tools_triggered": "search, execute",
-              "expected_behavior": "Find the offer (on the NL storefront), read its current price, state the current price and the new price (current price plus 10%, rounded to the cent), ask for confirmation, and make no update call until the user confirms."
+              "expected_behavior": "Return the order's country and explain that names, emails and addresses are anonymized, without trying to obtain them another way."
             },
             {
               "description": "Marketplace not connected",
