@@ -72,3 +72,4 @@ their next deploy; see [the package README](packages/setup-guide/README.md).
 ## License
 
 [MIT](LICENSE). Privacy policy: <https://getbacklane.com/privacy>.
+Terms of Service: <https://getbacklane.com/terms-of-service/>.
