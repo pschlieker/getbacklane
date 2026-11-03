@@ -23,7 +23,7 @@
     "websiteURL": "https://getbacklane.com",
     "privacyPolicyURL": "https://getbacklane.com/privacy",
     "supportURL": "https://getbacklane.com/docs/",
-    "termsOfServiceURL": "https://getbacklane.com/privacy",
+    "termsOfServiceURL": "https://getbacklane.com/terms-of-service/",
     "defaultPrompt": [
       "Which marketplaces are connected to Backlane?",
       "Show my open OTTO Market orders from the last 7 days.",
