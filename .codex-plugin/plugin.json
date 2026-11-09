@@ -1,7 +1,7 @@
 {
   "name": "backlane",
-  "version": "0.3.0",
-  "description": "Backlane lets your AI assistant work with your OTTO Market, Kaufland and Mirakl marketplace accounts through one MCP server.",
+  "version": "0.4.0",
+  "description": "Backlane lets your AI assistant work with your OTTO Market, Kaufland and Mirakl marketplace accounts and your Mirakl Ads advertising through one MCP server.",
   "author": {
     "name": "Backlane",
     "email": "hello@getbacklane.com",
@@ -10,13 +10,13 @@
   "homepage": "https://getbacklane.com",
   "repository": "https://github.com/pschlieker/getbacklane",
   "license": "MIT",
-  "keywords": ["backlane", "e-commerce", "marketplaces", "otto", "kaufland", "mirakl"],
+  "keywords": ["backlane", "e-commerce", "marketplaces", "otto", "kaufland", "mirakl", "mirakl-ads", "advertising"],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Backlane",
     "shortDescription": "Manage your marketplace sales",
-    "longDescription": "Backlane is for online sellers on OTTO Market, Kaufland and Mirakl-based marketplaces such as Home24. It connects ChatGPT and Codex to your own seller accounts through one MCP server, so you can work with orders, offers, prices, inventory, shipments and returns in plain language, answer buyer messages and handle incidents, and find and fix listing and product data problems. Changes are only made after you confirm them. Marketplace credentials are entered in the Backlane app, never in the chat, and Backlane only accesses the accounts your organization has connected.",
+    "longDescription": "Backlane is for online sellers on OTTO Market, Kaufland and Mirakl-based marketplaces such as Home24. It connects ChatGPT and Codex to your own seller accounts through one MCP server, so you can work with orders, offers, prices, inventory, shipments and returns in plain language, answer buyer messages and handle incidents, find and fix listing and product data problems, and manage Sponsored Products campaigns on OTTO and through Mirakl Ads. Changes are only made after you confirm them. Marketplace credentials are entered in the Backlane app, never in the chat, and Backlane only accesses the accounts your organization has connected.",
     "developerName": "ShopVibes GmbH",
     "category": "Business & Operations",
     "capabilities": ["Read", "Write"],

@@ -3,10 +3,10 @@ name: backlane
 description: >-
   Use when the user asks about their marketplace business on OTTO Market,
   Kaufland or a Mirakl-based marketplace: orders, offers, prices, inventory,
-  shipments, or connecting a marketplace account. For buyer tickets,
+  shipments, Mirakl Ads advertising, or connecting a marketplace account. For buyer tickets,
   messages, incidents and returns, use the `customer-service` skill.
   Requires the Backlane MCP server (tools `list_integrations`, `search`, `execute`).
-version: 0.3.0
+version: 0.4.0
 homepage: https://app.getbacklane.com
 repository: https://github.com/pschlieker/getbacklane
 ---
@@ -33,6 +33,23 @@ marketplace task in a session:
 
 That's it. If this works, the connection is healthy.
 
+## Mirakl Ads
+
+Sponsored Products advertising on Mirakl marketplaces is not in the
+marketplace connections. It is the separate Mirakl Ads integration (platform
+`mirakl_ads`, paths `/mirakl_ads/<connection>/...`):
+
+- One advertiser API key covers every retailer the advertiser account is
+  registered with, unlike the Mirakl marketplace connections (one per
+  marketplace).
+- It has campaigns, ad groups, advertised products, keywords and reports, but
+  no orders or offers.
+- If the user asks about ads on a Mirakl marketplace and Mirakl Ads is not
+  connected, call `list_integrations` with `{ "platform": "mirakl_ads" }` and
+  give them the setup link.
+- Ads spend real money: state the exact change (budgets and bids with amount
+  and currency) and get the user's confirmation before any write.
+
 ## Related skills
 
 - `customer-service`: buyer tickets, messages, incidents and returns on
@@ -40,6 +57,8 @@ That's it. If this works, the connection is healthy.
 - `daily-check`: what needs attention today across all channels.
 - `sales-analysis`: bestsellers, period comparisons, cancellations, returns
   and channel gaps.
+- `otto-ads`: OTTO Sponsored Product Ads campaigns, bids, keywords and
+  reports.
 
 ## Rules
 

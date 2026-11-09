@@ -140,7 +140,7 @@ export const setupContent = {
         "Schreibzugriffe lassen sich in den Backlane-Einstellungen für die Organisation deaktivieren. Schreibaktionen werden protokolliert.",
         "Du kannst Marktplatz-Verbindungen in Backlane trennen und den Backlane-Konnektor im KI-Client entfernen. Bei OTTO deinstallierst du zusätzlich die App in Partner Connect, um den Zugriff vollständig zu entziehen."
       ],
-      "marketplaces": "Unterstützt werden OTTO Market, Kaufland und die in Backlane angebotenen Mirakl-Marktplätze. Amazon ist noch nicht verfügbar. Welche Daten und Aktionen möglich sind, hängt von deiner Anbindung und ihren Berechtigungen ab.",
+      "marketplaces": "Unterstützt werden OTTO Market, Kaufland und die in Backlane angebotenen Mirakl-Marktplätze sowie Mirakl Ads für Sponsored-Products-Werbung. Amazon ist noch nicht verfügbar. Welche Daten und Aktionen möglich sind, hängt von deiner Anbindung und ihren Berechtigungen ab.",
       "examplesTitle": "Deine ersten Aufgaben",
       "examples": [
         {
@@ -313,7 +313,7 @@ export const setupContent = {
         "Write access can be disabled for the organisation in Backlane settings. Write actions are logged.",
         "Disconnect marketplace accounts in Backlane and remove the Backlane connector in your AI client. For OTTO, also uninstall the app in Partner Connect to fully revoke access."
       ],
-      "marketplaces": "Backlane supports OTTO Market, Kaufland and the Mirakl marketplaces available in the app. Amazon is not available yet. Available data and actions depend on your connection and permissions.",
+      "marketplaces": "Backlane supports OTTO Market, Kaufland and the Mirakl marketplaces available in the app, plus Mirakl Ads for Sponsored Products advertising. Amazon is not available yet. Available data and actions depend on your connection and permissions.",
       "examplesTitle": "Your first tasks",
       "examples": [
         {

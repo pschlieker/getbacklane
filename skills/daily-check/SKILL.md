@@ -9,7 +9,7 @@ description: >-
   across all channels. Read-only triage that hands each item to the right
   skill. Requires the Backlane MCP server (tools `list_integrations`,
   `search`, `execute`).
-version: 0.3.0
+version: 0.4.0
 homepage: https://app.getbacklane.com
 repository: https://github.com/pschlieker/getbacklane
 ---
@@ -109,7 +109,8 @@ Lead with what has a deadline. Keep it short enough to read on a phone.
 6. Next steps as offers, each handled by its skill:
    - replies, incidents, returns: `customer-service`
    - not-live or rejected products: `listing-health`
-   - ads below target: `otto-ads`
+   - ads below target: `otto-ads` (OTTO); Mirakl Ads campaigns through the
+     `mirakl_ads` connection
    - sales trends and cancellations: `sales-analysis`
 
 ## Weekly mode

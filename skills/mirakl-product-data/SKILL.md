@@ -8,7 +8,7 @@ description: >-
   manufacturer data, or re-sending product data. Requires the Backlane MCP
   server (tools `list_integrations`, `search`, `execute`) with a Mirakl
   connection.
-version: 0.3.0
+version: 0.4.0
 homepage: https://app.getbacklane.com
 repository: https://github.com/pschlieker/getbacklane
 ---

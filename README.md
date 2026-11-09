@@ -4,7 +4,7 @@
 
 Backlane is a remote MCP server. Connect your marketplace accounts once in the
 [Backlane app](https://app.getbacklane.com/app), connect Backlane in your AI client,
-and ask about orders, offers, prices and inventory in plain language.
+and ask about orders, offers, prices, inventory and ads in plain language.
 
 This repo holds the agent side: setup guides, skills and plugin manifests.
 
@@ -61,6 +61,8 @@ Then ask:
 - OTTO Market
 - Kaufland
 - Mirakl-based marketplaces
+- Mirakl Ads (Sponsored Products advertising on retailers that run Mirakl Ads;
+  one advertiser key covers all of them)
 
 ## Maintaining the setup guide
 

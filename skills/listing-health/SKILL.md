@@ -7,7 +7,7 @@ description: >-
   missing mandatory fields or GPSR data per item and channel, "why is this
   SKU/EAN not online", or a listing status overview across channels. Requires
   the Backlane MCP server (tools `list_integrations`, `search`, `execute`).
-version: 0.3.0
+version: 0.4.0
 homepage: https://app.getbacklane.com
 repository: https://github.com/pschlieker/getbacklane
 ---
