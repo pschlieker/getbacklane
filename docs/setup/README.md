@@ -14,7 +14,7 @@ You need a Backlane account and access to the seller account you want to connect
 
 Team workspaces may require administrator approval. Menu labels and availability depend on your AI provider.
 
-Backlane supports OTTO Market, Kaufland and the Mirakl marketplaces available in the app. Amazon is not available yet. Available data and actions depend on your connection and permissions.
+Backlane supports OTTO Market, Kaufland and the Mirakl marketplaces available in the app, plus Mirakl Ads for Sponsored Products advertising. Amazon is not available yet. Available data and actions depend on your connection and permissions.
 
 ## Connection details
 

@@ -1,7 +1,7 @@
 {
   "name": "backlane",
-  "version": "0.3.0",
-  "description": "Backlane gives Gemini CLI access to your OTTO Market, Kaufland and Mirakl marketplace accounts.",
+  "version": "0.4.0",
+  "description": "Backlane gives Gemini CLI access to your OTTO Market, Kaufland and Mirakl marketplace accounts and your Mirakl Ads advertising.",
   "mcpServers": {
     "backlane": {
       "httpUrl": "https://app.getbacklane.com/mcp",

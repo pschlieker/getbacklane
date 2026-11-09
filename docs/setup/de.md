@@ -14,7 +14,7 @@ Du brauchst einen Backlane-Account und Zugriff auf den Seller-Account, den du ve
 
 In Team-Workspaces kann eine Freigabe durch einen Administrator erforderlich sein. Menübezeichnungen und Verfügbarkeit hängen vom KI-Anbieter ab.
 
-Unterstützt werden OTTO Market, Kaufland und die in Backlane angebotenen Mirakl-Marktplätze. Amazon ist noch nicht verfügbar. Welche Daten und Aktionen möglich sind, hängt von deiner Anbindung und ihren Berechtigungen ab.
+Unterstützt werden OTTO Market, Kaufland und die in Backlane angebotenen Mirakl-Marktplätze sowie Mirakl Ads für Sponsored-Products-Werbung. Amazon ist noch nicht verfügbar. Welche Daten und Aktionen möglich sind, hängt von deiner Anbindung und ihren Berechtigungen ab.
 
 ## Verbindungsdaten
 

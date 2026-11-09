@@ -4,7 +4,7 @@ description: >-
   Use right after Backlane is installed, or when the user asks how to set up
   Backlane, connect a marketplace account, or check that Backlane works.
   Verifies the MCP connection and walks the user through connecting OTTO
-  Market, Kaufland or Mirakl accounts.
+  Market, Kaufland, Mirakl or Mirakl Ads accounts.
 ---
 
 # Get started with Backlane
@@ -31,6 +31,10 @@ connected.
 For each marketplace the user wants that is not connected yet, give them the
 setup link from the `list_integrations` result. Marketplace credentials are
 entered in the Backlane app only.
+
+If the user advertises on a Mirakl marketplace, also offer Mirakl Ads. It is a
+separate integration from the marketplace connections: one advertiser API key
+covers every retailer the account advertises on.
 
 When the user says they are done, call `list_integrations` again and confirm.
 
